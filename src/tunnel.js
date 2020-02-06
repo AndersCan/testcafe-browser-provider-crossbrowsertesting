@@ -2,10 +2,13 @@ import chalk from 'chalk';
 
 // @ts-ignore
 import cbt from 'cbt_tunnels';
+import { getUsername, getAuthkey } from './utils';
 let tunnul_is_started = false;
 
 let start_tunnel_promise = undefined;
-export const startTunnel = async (tunnelName = `${Math.random()}`.slice(2)) => {
+export const startTunnel = async (
+    tunnelName = `testcafe-cbt-${String(Math.random()).slice(-6)}`
+) => {
     if (start_tunnel_promise) {
         return start_tunnel_promise;
     } else if (tunnul_is_started) {
@@ -87,8 +90,8 @@ if (process.mainModule === module) {
 }
 
 export function getSecretConfig() {
-    const CBT_USERNAME = process.env.CBT_TUNNELS_USERNAME;
-    const CBT_AUTHKEY = process.env.CBT_TUNNELS_AUTHKEY;
+    const CBT_USERNAME = getUsername();
+    const CBT_AUTHKEY = getAuthkey();
 
     if (CBT_USERNAME && CBT_AUTHKEY) {
         return {

@@ -34,7 +34,7 @@
     "lodash": "^4.17.4",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
-    "wd": "^1.11.1"
+    "selenium-webdriver": "^4.0.0-alpha.5"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
