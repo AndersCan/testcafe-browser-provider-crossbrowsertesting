@@ -48,13 +48,13 @@ async function startBrowser(id, url, capabilities) {
         .build();
 
     try {
-        await webDriverBrowser.getSession().then(function(session) {
-            const sessionId = session.getId();
-            sessionIds[id] = sessionId;
-            debug(
-                `Running at: https://app.crossbrowsertesting.com/selenium/${sessionId}`
-            );
-        });
+        const session = await webDriverBrowser.getSession();
+        const sessionId = session.getId();
+        sessionIds[id] = sessionId;
+        debug(
+            `Running at: https://app.crossbrowsertesting.com/selenium/${sessionId}`
+        );
+
         await webDriverBrowser.get(url);
         debug(`${id}: browser opened`);
         openedBrowsers[id] = webDriverBrowser;

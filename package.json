@@ -1,14 +1,7 @@
 {
   "name": "testcafe-browser-provider-crossbrowsertesting",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "crossbrowsertesting TestCafe browser provider plugin.",
-  "repository": "https://github.com/sijosyn/testcafe-browser-provider-crossbrowsertesting",
-  "homepage": "https://github.com/sijosyn/testcafe-browser-provider-crossbrowsertesting",
-  "author": {
-    "name": "Sijo Cheeran",
-    "email": "sijo.cheeran@synacor.com",
-    "url": "https://synacor.com"
-  },
   "main": "lib/index",
   "files": [
     "lib"
